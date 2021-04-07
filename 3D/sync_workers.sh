@@ -1,4 +1,7 @@
-# Copyright (c) 2020 Intel Corporation
+#!/usr/bin/env bash
+# -*- coding: utf-8 -*-
+#
+# Copyright (c) 2019 Intel Corporation
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,5 +18,10 @@
 # SPDX-License-Identifier: EPL-2.0
 #
 
-horovodrun -np 4 -H localhost:4 --binding-args="--map-by ppr:2:socket:pe=10" --mpi-args="--report-bindings" python train_horovod.py
+ssh demo02 "cd topologies && git pull"
+
+ssh demo03 "cd topologies && git pull"
+
+ssh demo04 "cd topologies && git pull"
+
 

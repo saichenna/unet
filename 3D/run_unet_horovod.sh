@@ -19,8 +19,8 @@
 #
 
 source ~/.bashrc
-conda activate decathlon
-cd /home/unet/unet/3D
-python train_horovod.py --batch_size 4 --data_path /home/unet/data/decathlon/Task01_BrainTumour/
+conda activate tf
+cd ~/topologies/3D_UNet/keras_training_only_version/
+python train_horovod.py --bz 8  --intraop_threads 28
 
 conda deactivate
